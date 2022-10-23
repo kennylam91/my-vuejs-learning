@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import SlotScopedDemo from '@/modules/slot-scoped/index.vue'
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: '/slot-scoped-demo',
+    name: 'SlotScopedDemo',
+    component: SlotScopedDemo
+  }
 ];
 
 const router = new VueRouter({
